@@ -1,0 +1,26 @@
+languageCode = "ru"
+languageName = "Русский"
+weight = 1
+title = "Азиз Абдухалилов"
+
+[params]
+  displayName = "Русский"
+  isoCode = "ru"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = ""
+  description = "Личный блог."
+
+[params.author]
+  name = "Азиз Абдухалилов"
+  email = "abduhalilovaz@ya.ry"
+  image = "img/me.jpg"
+  headline = "AppSupport, люблю учиться и искать новые контакты"
+  bio = "Коротко о себе и чем занимаюсь."
+  links = [
+    { telegram = "https://t.me/zabdukhalilov" },
+    { email = "mailto:abduhalilovaz@ya.ry" },
+    { linkedin = "https://linkedin.com/in/your-profile" },
+  ]
+
+

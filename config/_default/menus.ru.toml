@@ -1,0 +1,25 @@
+# -- Главное меню --
+
+[[main]]
+  name = "Жизнь"
+  pageRef = "zhizn"
+  weight = 10
+
+[[main]]
+  name = "Работа"
+  pageRef = "rabota"
+  weight = 20
+
+# -- Меню в подвале --
+
+[[footer]]
+  name = "Теги"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
+  name = "Авторы"
+  pageRef = "authors"
+  weight = 20
+
+

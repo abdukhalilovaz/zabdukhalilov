@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway # Измените на github/gitlab/bitbucket при необходимости
+  branch: main
+
+# Локальная работа без внешнего бэкенда (запуск прокси)
+local_backend: true
+
+media_folder: "static/uploads"      # куда складывать файлы в репозитории
+public_folder: "/uploads"           # как они будут доступны на сайте
+
+publish_mode: editorial_workflow      # Черновики/модерация (можно заменить на simple)
+
+collections:
+  - name: zhizn
+    label: "Жизнь"
+    label_singular: "Запись"
+    folder: "content/zhizn"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: false }
+      - { label: "Описание", name: "description", widget: "text", required: false }
+      - { label: "Обложка", name: "featuredImage", widget: "image", required: false }
+      - { label: "Теги", name: "tags", widget: "list", required: false }
+      - { label: "Содержимое", name: "body", widget: "markdown" }
+
+  - name: rabota
+    label: "Работа"
+    label_singular: "Запись"
+    folder: "content/rabota"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Черновик", name: "draft", widget: "boolean", default: false }
+      - { label: "Описание", name: "description", widget: "text", required: false }
+      - { label: "Обложка", name: "featuredImage", widget: "image", required: false }
+      - { label: "Теги", name: "tags", widget: "list", required: false }
+      - { label: "Содержимое", name: "body", widget: "markdown" }
+
+  - name: pages
+    label: "Страницы"
+    files:
+      - label: "Главная"
+        name: "home"
+        file: "content/_index.md"
+        format: "frontmatter"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string" }
+          - { label: "Описание", name: "description", widget: "string", required: false }
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+
+
