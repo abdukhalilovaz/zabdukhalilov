@@ -1,13 +1,13 @@
 # -- Главное меню --
 
 [[main]]
-  name = "Жизнь"
-  pageRef = "zhizn"
+  name = "обо мне"
+  url = "/about/"
   weight = 10
 
 [[main]]
-  name = "Работа"
-  pageRef = "rabota"
+  name = "проекты"
+  url = "/projects/"
   weight = 20
 
 # -- Меню в подвале --
