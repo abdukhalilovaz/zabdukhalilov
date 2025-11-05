@@ -3,60 +3,48 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
-  
-  # Позволяет запускать вручную из вкладки Actions
   workflow_dispatch:
 
-# Разрешаем один одновременный деплой
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive  # Важно для темы Blowfish!
+          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.120.4'  # Актуальная версия
-          extended: true  # Обязательно для Blowfish!
+          hugo-version: '0.152.0'
+          extended: true
 
       - name: Build
         run: hugo --minify
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3  # ← ИСПРАВЛЕНО НА v3
         with:
           path: ./public
 
   deploy:
-    # Требует разрешения pages для деплоя
-    permissions:
-      pages: write
-      id-token: write
-    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
     runs-on: ubuntu-latest
     needs: build
-    
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
