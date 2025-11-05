@@ -25,7 +25,7 @@ disableTextInHeader = false
 
 defaultBackgroundImage = "/img/background.svg"
 defaultFeaturedImage = "/img/featured.svg"
-defaultSocialImage = "/img/blowfish_banner.png"
+defaultSocialImage = "/android-chrome-512x512.png"
 hotlinkFeatureImage = false
 # imagePosition = "50% 50%"
 
@@ -50,7 +50,7 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 
 [homepage]
   layout = "page" # valid options: page, profile, hero, card, background, custom
-  # homepageImage = "/img/me.jpg" # used in: hero, and card
+  homepageImage = "/img/me.jpg" # used in: hero, and card
   showRecent = false
   showRecentItems = 12
   showMoreLink = true
@@ -75,7 +75,7 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
   showBreadcrumbs = true
   showDraftLabel = true
   showEdit = true
-  editURL = "https://github.com/nunocoracao/blowfish/tree/main/exampleSite/content"
+  editURL = "https://github.com/abdukhalilovaz/zabdukhalilov/tree/main/content"
   editAppendPath = true
   seriesOpened = false
   showHeadingAnchors = true

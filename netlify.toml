@@ -1,16 +1,11 @@
 [build]
-  command = "hugo --gc --minify"
   publish = "public"
 
-[build.environment]
-  HUGO_VERSION = "0.128.2"
-  HUGO_ENABLEGITINFO = "true"
-  NODE_VERSION = "20"
+[dev]
+  framework = "hugo"
 
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    Referrer-Policy = "same-origin"
-
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
 
