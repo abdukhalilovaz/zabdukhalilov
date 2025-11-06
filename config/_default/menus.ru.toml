@@ -2,12 +2,12 @@
 
 [[main]]
   name = "обо мне"
-  url = "/about/"
+  pageRef = "about"
   weight = 10
 
 [[main]]
   name = "проекты"
-  url = "/projects/"
+  pageRef = "projects"
   weight = 20
 
 # -- Меню в подвале --

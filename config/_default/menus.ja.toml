@@ -80,12 +80,12 @@
 # このフッターメニューはページ下部のコピーライト表示の前に表示されます。
 # 上記のメインメニューと同様に設定できます。
 
- [[footer]]
-   name = "タグ"
-   pageRef = "tags"
-   weight = 10
+[[footer]]
+  name = "タグ"
+  pageRef = "tags"
+  weight = 10
 
- [[footer]]
-   name = "著者"
-   pageRef = "authors"
-   weight = 20
+[[footer]]
+  name = "著者"
+  pageRef = "authors"
+  weight = 20
